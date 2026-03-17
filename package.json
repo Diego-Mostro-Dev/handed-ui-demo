@@ -17,8 +17,8 @@
   ],
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
-    "lint": "eslint .",
+    "build": "vite build --mode lib",
+    "build:demo": "vite build",
     "preview": "vite preview"
   },
   "repository": {
