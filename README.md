@@ -5,7 +5,7 @@ Permite cambiar la orientación de los elementos interactivos de manera dinámic
 
 **Autor:** Diego Salvado  
 **Repositorio:** [github.com/Diego-Mostro-Dev/handed-ui-demo](https://github.com/Diego-Mostro-Dev/handed-ui-demo)  
-**LinkedIn:** [linkedin.com/in/diego-salvado](https://www.linkedin.com/in/diego-salvado/)
+**LinkedIn:** [linkedin.com/in/diego-salvado](https://www.linkedin.com/in/diegosalvadodev/)
 
 ## Características
 
