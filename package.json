@@ -1,6 +1,6 @@
 {
   "name": "handed-ui",
-  "version": "0.0.4",
+  "version": "1.0.0",
   "description": "React UI components that adapt layout based on user's dominant hand",
   "author": "Diego A. Salvado",
   "homepage": "https://github.com/Diego-Mostro-Dev/handed-ui",
