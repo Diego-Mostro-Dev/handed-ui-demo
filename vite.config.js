@@ -7,17 +7,11 @@ export default defineConfig({
     lib: {
       entry: "src/index.js",
       name: "HandedUI",
-      formats: ["es", "cjs"],
-      fileName: (format) => `handed-ui.${format}.js`,
+      formats: ["es"],
+      fileName: () => "handed-ui.js",
     },
     rollupOptions: {
       external: ["react", "react-dom"],
-      output: {
-        globals: {
-          react: "React",
-          "react-dom": "ReactDOM",
-        },
-      },
     },
   },
 });

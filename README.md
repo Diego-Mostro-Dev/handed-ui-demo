@@ -1,9 +1,11 @@
 # Handed UI
 
+> Adaptive React UI for left- and right-handed users.
+
 ![npm](https://img.shields.io/npm/v/handed-ui)
 ![license](https://img.shields.io/npm/l/handed-ui)
 ![react](https://img.shields.io/badge/react-18-blue)
-![demo](https://img.shields.io/badge/demo-online-green)
+[![demo](https://img.shields.io/badge/demo-online-green)](https://handed-ui-demo.netlify.app/)
 
 Biblioteca de componentes de interfaz para React que adapta la posición de elementos interactivos según la mano dominante del usuario (diestro o zurdo).
 
@@ -40,6 +42,8 @@ https://handed-ui-demo.netlify.app/
 
 ✋ Selector de mano dominante (diestro / zurdo)
 
+🪝 Hook `useHand` para control total del estado
+
 📱 Pensado para UX móvil
 
 🧭 Adaptación automática del layout
@@ -56,59 +60,101 @@ https://handed-ui-demo.netlify.app/
 npm install handed-ui
 ```
 
-o
+```bash
+pnpm add handed-ui
+```
 
 ```bash
 yarn add handed-ui
 ```
 
-## Uso básico
+## 🚀 Quick start
+
+### Uso básico
+
+### 1. Envolver la aplicación
 
 ```jsx
-import { HandProvider, HandSelector } from "handed-ui";
+import { HandProvider } from "handed-ui";
 
-function App() {
+function Root() {
   return (
     <HandProvider>
-      <HandSelector />
-      <TuAplicacion />
+      <App />
     </HandProvider>
   );
 }
 ```
 
-## Componentes
+### 2. Usar el hook
 
-HandProvider
+```jsx
+import { useHand } from "handed-ui";
+
+function Example() {
+  const { hand, toggle, setHand } = useHand();
+
+  return (
+    <>
+      <p>Mano actual: {hand}</p>
+      <button onClick={toggle}>Cambiar</button>
+    </>
+  );
+}
+```
+
+### 📦 Retorno del hook
+
+```typescript
+  {
+    hand: "left" | "right";
+    setHand: (hand: "left" | "right") => void;
+    toggle: () => void;
+  }
+
+```
+
+> ⚠️ `useHand()` devuelve un objeto. Es necesario desestructurarlo antes de renderizar.
+
+## 🧩 Componentes
+
+### HandProvider
 
 Provee el contexto global que almacena la mano dominante seleccionada.
 
+```jsx
 <HandProvider>
   <App />
 </HandProvider>
+```
 
-## HandSelector
+### HandToggle
 
 Componente que permite cambiar entre modo diestro y zurdo.
 
-<HandSelector />
+```jsx
+import { HandToggle } from "handed-ui";
 
-## FloatingToggle
+<HandToggle />;
+```
 
-Botón flotante tipo menú que no cambia la mano, solo abre acciones adicionales.
+### Fab
 
-<FloatingToggle />
+Botón flotante que se posiciona automáticamente según la mano seleccionada.
 
-Floating Action Button (FAB)
+```jsx
+import { Fab } from "handed-ui";
 
-Botón de acción rápida que se posiciona automáticamente según la mano seleccionada.
+<Fab onClick={() => console.log("click")} />;
+```
 
 ## Cómo funciona
 
 La librería utiliza un atributo en el elemento raíz:
 
-data-hand="right"
-data-hand="left"
+```html
+data-hand="right" data-hand="left"
+```
 
 Luego el CSS adapta el layout automáticamente.
 
@@ -148,8 +194,7 @@ Ejecutá la demo en desarrollo:
 npm run dev
 ```
 
-Abre http://localhost:3000
-en tu navegador para ver la demo.
+Abre http://localhost:3000 en tu navegador
 
 ## Estructura del proyecto
 
@@ -181,10 +226,12 @@ Los botones toggle y otros componentes usan clases CSS que permiten tanto su est
 
 Ejemplo:
 
+```CSS
 .fab {
 background: black;
 border-radius: 50%;
 }
+```
 
 También puede integrarse con:
 
