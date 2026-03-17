@@ -4,12 +4,12 @@
   "sideEffects": false,
   "type": "module",
   "license": "MIT",
-  "main": "./dist/handed-ui.cjs",
+  "main": "./dist/handed-ui.cjs.js",
   "module": "./dist/handed-ui.es.js",
   "exports": {
     ".": {
       "import": "./dist/handed-ui.es.js",
-      "require": "./dist/handed-ui.js"
+      "require": "./dist/handed-ui.cjs.js"
     }
   },
   "files": [

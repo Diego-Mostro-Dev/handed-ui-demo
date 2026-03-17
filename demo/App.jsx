@@ -1,11 +1,11 @@
 import { HandProvider, useHand, useHandSide, Fab } from "../src/index";
-import { ManoDerecha, ManoIzquierda } from "../demo/icons/Icons.jsx";
+import { ManoDerecha, ManoIzquierda } from "./icons/Icons.jsx";
 import "./main.css";
 
 // Botón fijo de selección de mano debajo del título
 function HandSelector() {
   const { hand, toggle } = useHand();
-  const Icon = hand === "right" ? ManoDerecha : ManoIzquierda;
+  const Icon = hand === "right" ? ManoIzquierda : ManoDerecha;
 
   return (
     <button className="toggle hand-start" onClick={toggle}>
