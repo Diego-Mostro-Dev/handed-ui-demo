@@ -204,8 +204,10 @@ Context API para manejo de la mano preferida (HandProvider)
 
 Componente FAB flotante
 
-**Autor:** Diego Salvado  
+**Autor:** Diego Salvado
+
 **Repositorio:** https://github.com/Diego-Mostro-Dev/handed-ui
+
 **LinkedIn:** [linkedin.com/in/diego-salvado](https://www.linkedin.com/in/diegosalvadodev/)
 
 ## Licencia
