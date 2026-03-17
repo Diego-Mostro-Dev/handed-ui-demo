@@ -1,9 +1,9 @@
-## Handed UI - Demo
+# Handed UI - Demo
 
 Demo de componentes de interfaz en React adaptables según la mano preferida del usuario (diestro o zurdo).
 Permite cambiar la orientación de los elementos interactivos de manera dinámica para mejorar la accesibilidad y la experiencia de usuario.
 
-# Características
+## Características
 
 Selección de mano: Botón fijo que permite alternar entre diestro y zurdo.
 
@@ -15,14 +15,14 @@ Botón flotante (FAB): Acciones rápidas flotantes que respetan la preferencia d
 
 Responsive: Funciona correctamente en dispositivos móviles y desktop.
 
-# Capturas de pantalla
+## Capturas de pantalla
 
 ![Captura 1](./screenshots/demo1.png)  
 ![Captura 2](./screenshots/demo2.png)
 
 _(Opcional: agregar imágenes si querés mostrar la demo)_
 
-# Instalación
+## Instalación
 
 Cloná el repositorio:
 
@@ -54,7 +54,7 @@ yarn start
 Abre http://localhost:3000
 en tu navegador para ver la demo.
 
-# Uso
+## Uso
 
 HandSelector: Cambia la mano preferida. Afecta la alineación de botones en las cards y el FAB.
 
@@ -62,7 +62,7 @@ FloatingToggle: Botón de menú independiente, no cambia la mano.
 
 Las cards se adaptan automáticamente según la mano seleccionada.
 
-# Tecnologías
+## Tecnologías
 
 React
 
@@ -72,11 +72,11 @@ Context API para manejo de la mano preferida (HandProvider)
 
 Componente FAB flotante
 
-# Contribución
+## Contribución
 
 Se aceptan pull requests y sugerencias para mejorar la demo o los componentes.
 Antes de contribuir, asegurate de clonar el repositorio y probar los cambios localmente.
 
-# Licencia
+## Licencia
 
 MIT License. Libre para uso personal y comercial.
