@@ -1,0 +1,193 @@
+/* Body y contenedor demo */
+body {
+  font-family: Inter, system-ui, sans-serif;
+  background: #f5f7fb;
+  margin: 0;
+  padding: 0;
+}
+
+.demo-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  gap: 30px;
+}
+
+/* Header */
+.demo-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* HandSelector debajo del título */
+.toggle.hand-start {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  background: #4f46e5;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: background 0.2s, transform 0.2s;
+  margin-top: 12px;
+}
+
+.toggle.hand-start:hover {
+  background: #4338ca;
+  transform: translateY(-2px);
+}
+
+/* Toggle flotante tipo hamburguesa */
+.toggle.hand-end {
+  position: fixed;
+  top: 20px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  background: #4f46e5;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: background 0.2s, transform 0.2s;
+}
+
+.toggle.hand-end:hover {
+  background: #4338ca;
+  transform: translateY(-2px);
+}
+
+/* Ajuste según mano */
+[data-hand="right"] .toggle.hand-end {
+  right: 30px;
+}
+
+[data-hand="left"] .toggle.hand-end {
+  left: 30px;
+}
+
+/* Cards */
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.card {
+  width: 100%;
+  max-width: 380px;
+  background: white;
+  border-radius: 14px;
+  padding: 24px;
+  box-shadow:
+    0 4px 10px rgba(0, 0, 0, 0.05),
+    0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+.card-header h2,
+.card-header p,
+.card-body {
+  text-align: center;
+  margin: 0;
+}
+
+.card-header p {
+  margin-top: 4px;
+  color: #6b7280;
+}
+
+.card-body {
+  margin: 16px 0;
+  color: #374151;
+}
+
+/* Card actions alineadas según mano */
+.card-actions {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+
+.hand-flex-start {
+  justify-content: flex-start;
+}
+
+.hand-flex-end {
+  justify-content: flex-end;
+}
+
+/* Botones */
+.primary {
+  background: #4f46e5;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.primary:hover {
+  background: #4338ca;
+}
+
+.secondary {
+  background: transparent;
+  border: 1px solid #d1d5db;
+  padding: 10px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.secondary:hover {
+  background: #f3f4f6;
+}
+
+/* Floating button */
+.fab {
+  position: fixed;
+  bottom: 30px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: none;
+  background: #4f46e5;
+  color: white;
+  font-size: 22px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+[data-hand="right"] .fab {
+  right: 30px;
+}
+
+[data-hand="left"] .fab {
+  left: 30px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cards {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .card {
+    width: 100%;
+  }
+}

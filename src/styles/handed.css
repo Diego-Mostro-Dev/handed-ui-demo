@@ -1,0 +1,38 @@
+/* helpers base */
+
+.hand-start {}
+
+.hand-end {}
+
+/* start */
+
+[data-hand="right"] .hand-start {
+  right: 20px;
+}
+
+[data-hand="left"] .hand-start {
+  left: 20px;
+}
+
+/* end */
+
+[data-hand="right"] .hand-end {
+  left: 20px;
+}
+
+[data-hand="left"] .hand-end {
+  right: 20px;
+}
+
+.card-actions {
+  display: flex;
+  gap: 10px;
+}
+
+[data-hand="right"] .card-actions {
+  justify-content: flex-end;
+}
+
+[data-hand="left"] .card-actions {
+  justify-content: flex-start;
+}
