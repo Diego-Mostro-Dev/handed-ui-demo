@@ -29,7 +29,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Diego-Mostro-Dev/handed-ui-demo"
+    "url": "git+https://github.com/Diego-Mostro-Dev/handed-ui-demo.git"
   },
   "keywords": [
     "react",
